@@ -1,0 +1,7 @@
+parameters:
+    no_reply_email: "consumerresearch@sonymusic.com"
+    no_reply_email_sender: 'Sony Music Atlas'
+    no_reply_email_welcome_subject: 'Welcome to Sony Music Atlas'
+    help_email: "consumerresearch@sonymusic.com"
+    search_result_cache: 3600
+    excluded_user_emails: ["oysterlabs.com"]
