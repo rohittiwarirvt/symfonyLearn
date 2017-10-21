@@ -3,9 +3,9 @@ imports:
     - { resource: static_parameters.yml}
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: "@ExtensionsUserBundle/Resources/config/services.xml" }
-    - { resource: "@OyCommonBundle/Resources/config/services.xml" }
-    - { resource: "@AcmeTestBundle/Resources/config/services.yml" }
+    # - { resource: "@ExtensionsUserBundle/Resources/config/services.xml" }
+    # - { resource: "@OyCommonBundle/Resources/config/services.xml" }
+    # - { resource: "@AcmeTestBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -73,15 +73,7 @@ swiftmailer:
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
-    user_class: Oy\CommonBundle\Entity\User
-    profile:
-        form:
-            type: extensions_user_profile
+    user_class: Acme\TestBundle\Entity
     from_email:
-        address:        %no_reply_email%
-        sender_name:    %no_reply_email_sender%
-    resetting:
-        email:
-            template: ExtensionsUserBundle:Resetting:email.html.twig
-#    service:
-#        mailer: extensions_user.mailer.custom_twig_swift
+        address:        %mailer_user%
+        sender_name:    %mailer_user%

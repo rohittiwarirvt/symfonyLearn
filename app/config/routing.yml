@@ -3,14 +3,16 @@ acme_test:
     type:     annotation
     prefix:   /
 
-oy_common:
-    resource: "@OyCommonBundle/Resources/config/routing.xml"
-    prefix:   /
+# oy_common:
+#     resource: "@OyCommonBundle/Resources/config/routing.xml"
+#     prefix:   /
 
-extensions_user:
-    resource: "@ExtensionsUserBundle/Resources/config/routing.xml"
-    prefix:   /
+# extensions_user:
+#     resource: "@ExtensionsUserBundle/Resources/config/routing.xml"
+#     prefix:   /
 
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
